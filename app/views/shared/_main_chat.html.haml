@@ -1,0 +1,42 @@
+.main_chat
+  .main_chat__group-info
+    .top-items
+      %h1.top-items__group-name text
+      %ul.top-items__group-member Member :masa
+    .top-edit 
+      = link_to "Edit", "#", class: "top-edit__btn"
+  .main_chat__message-list
+    .messages
+      .messages__top 
+        .messages__top__name 
+          masa
+        .messages__top__date 
+          2020/02/07(Fri) 12:24:24
+      .messages__text 
+        hello
+    .messages
+      .messages__top 
+        .messages__top__name 
+          Sato
+        .messages__top__date 
+          2020/02/07(Fri) 12:24:24
+      .messages__text 
+        hello
+    .messages
+      .messages__top 
+        .messages__top__name 
+          Ryogo
+        .messages__top__date 
+          2020/02/07(Fri) 12:24:24
+      .messages__text 
+        hello
+  .main_chat__message-form
+    %form.form-box
+      .form-box__top 
+        %input{type: "text", class: "form-box__text", placeholder: "type a message"}
+        %label{class: "form-box__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "form-box__image__file"}
+      %input{value: "Send", type: "submit", class: "form-box__send"} 
+
+
