@@ -1,15 +1,15 @@
 .side_ber
   .side_ber__user-name
     .user-name__top-items
-      %p.top-items__name masa
-      
+      %p.top-items__name 
+        =current_user.name
       %ul.top-items__icons
         %li.top-items__new-group
           = link_to "#" do
-            = icon('fas', 'edit')
+            = icon('fas', 'edit', class: 'icon')
         %li.top-items__edit-account
-          = link_to "#" do
-            = icon('fas', 'cog')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
   .groups
     .group
       .group__name
