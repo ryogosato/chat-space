@@ -42,10 +42,13 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px 20px 0px;
-      .group{
+      .group {
         height: 91px;
         font-weight: bold;
-        color: $w;
+        a {
+          text-decoration: none;
+          color: $w;
+        }
         &__name {
           font-size: 15px;
         }
@@ -67,14 +70,22 @@
       padding: 0px 40px;
       .top-items {
         margin-top: 35px;
-        &__group-name {
+        h1 {
           color: #333333;
           font-size: 20px;
           margin-bottom: 15px;
-          }
+          text-align: start;
+        }
         &__group-member {
+          display: flex;
           color: $g;
           font-size: 12px;
+          ul {
+            display: flex;
+            li {
+              padding: 0 0 0 5px;
+            }
+          }
         }
         }
       }
@@ -95,14 +106,14 @@
         height: calc(100vh - 190px);
         background-color: #fafafa;
         padding: 35px 40px;
-        .messages {
+        .message {
           height: 88px;
           padding-bottom: 46px;
-          &__top {
+          .upper-message {
             height: 16px;
             margin-bottom: 12px;
             display: flex;
-            &__name {
+            &__user-name {
               font-size: 16px;
               line-height: 16px;
               color: #333333;
@@ -113,7 +124,7 @@
               color: $g;
             }
           }
-          &__text {
+          .lower-message {
             height: 14px;
             font-size: 14px;
             line-height: 14px;
@@ -126,39 +137,52 @@
         bottom: 0px;
         background-color: #d2d2d2;
         padding: 20px 40px;
-        .form-box {
-          display: flex;
-          &__top {
-            width: 100%;
+        .form-box__top {
+          width: 100%;
+          .new_message {
             display: flex;
             position: relative;
             .form-box__text {
-              background-color: white;
+              height: 50px;
               width: 100%;
-              padding-left: 10px;
-              line-height: 50px;
-              color: $g;
+              padding: 0 40px 0 10px;
+              color: #434a54;
+              border-style: none;
             }
-            .form-box__image {
+            .form-box__mask{
               position: absolute;
-              right: 10px;
-              line-height: 50px;
-              &__file {
-                display: none;
-              }
+              top: 10px;
+              right: 130px;
+              .form-box__image {
+                
+                font-size: 1.4rem;
+                cursor: pointer;
+                
+                // .icon {
+                // }
+                .form-box__image__file {
+                  display: none;
+                }
             }
           }
-          &__send {
-            margin-left: 15px;
+          
+            
+          }
+          
+          .form-box__send {
             width: 100px;
             height: 50px;
-            right: 0px;
-            text-align: center;
+            padding: 0 30px;
+            margin-left: 15px;
             background-color: #38aef0;
             color: white;
-            line-height: 50px;
+            cursor: pointer;
           }
+            }
+          }
+          
         }
-      }
-    }
-  }
+        }
+      
+
+
