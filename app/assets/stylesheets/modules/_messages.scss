@@ -60,8 +60,10 @@
     }
   }
   .main_chat {
+    position: relative;
     background-color: $w;
     width: calc(100vw - 300px);
+    height: 100vh;
     &__group-info {
       height: 100px;
       background-color: $w;
@@ -106,6 +108,7 @@
         height: calc(100vh - 190px);
         background-color: #fafafa;
         padding: 35px 40px;
+        overflow: scroll;
         .message {
           height: 88px;
           padding-bottom: 46px;
@@ -137,8 +140,11 @@
         bottom: 0px;
         background-color: #d2d2d2;
         padding: 20px 40px;
+        position: fixed;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
         .form-box__top {
-          width: 100%;
           .new_message {
             display: flex;
             position: relative;
