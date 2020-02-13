@@ -42,6 +42,7 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px 20px 0px;
+      overflow: scroll;
       .group {
         height: 91px;
         font-weight: bold;
@@ -110,7 +111,7 @@
         padding: 35px 40px;
         overflow: scroll;
         .message {
-          height: 88px;
+
           padding-bottom: 46px;
           .upper-message {
             height: 16px;
@@ -128,10 +129,12 @@
             }
           }
           .lower-message {
-            height: 14px;
-            font-size: 14px;
-            line-height: 14px;
-            color: #434A54;
+            &__content {
+              font-size: 14px;
+              line-height: 14px;
+              color: #434A54;
+              height: 14px;
+            }
           }
         }
       }
